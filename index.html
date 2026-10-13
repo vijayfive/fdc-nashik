@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Family Dental Care · Dr. Rajkumar Makhijani · Nashik Road</title>
+<meta name="description" content="Family Dental Care, Nashik Road — gentle, painless dental care by Dr. Rajkumar Makhijani. Implants, root canals, aligners, cosmetic dentistry & more. Rated 4.9★ by 91 patients on Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#7ab51d;        /* logo green */
+  --green-dark:#4f7d0e;   /* text-safe green */
+  --green-soft:#eef6dc;
+  --green-wash:#f7fbee;
+  --ink:#262a22;          /* logo charcoal */
+  --muted:#5d6556;
+  --line:#e3e9d6;
+  --white:#fff;
+  --radius:22px;
+  --shadow:0 18px 50px -20px rgba(60,90,10,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em}
+.wrap{width:min(1160px,100% - 40px);margin:0 auto}
+section{padding:96px 0}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green-dark);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--green)}
+h2{font-size:clamp(2rem,4vw,3rem);margin:14px 0 16px}
+.lead{color:var(--muted);font-size:1.08rem;max-width:60ch}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:.98rem;border:2px solid transparent;cursor:pointer;transition:.2s;font-family:inherit}
+.btn-primary{background:var(--green);color:#1d2a05}
+.btn-primary:hover{background:#6aa216;transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(90,140,10,.7)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:Inter;font-weight:500;font-size:1.45rem;letter-spacing:-.03em}
+.logo b span{color:var(--green);font-weight:700}
+.logo small{font-size:.58rem;letter-spacing:.5em;font-weight:600;align-self:flex-end;margin-top:3px;color:var(--ink)}
+nav ul{display:flex;gap:30px;list-style:none;font-size:.95rem;font-weight:500}
+nav a:hover{color:var(--green-dark)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-phone{font-weight:600;font-size:.95rem}
+.burger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px auto;transition:.2s}
+
+/* hero */
+.hero{padding:70px 0 90px;background:radial-gradient(900px 500px at 85% 0,var(--green-soft),transparent 70%),var(--white);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.pin{display:inline-flex;gap:8px;align-items:center;background:var(--green-soft);color:var(--green-dark);padding:7px 14px;border-radius:999px;font-size:.84rem;font-weight:600}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);margin:22px 0}
+.hero h1 em{font-style:normal;color:var(--green)}
+.hero p.lead{margin-bottom:34px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
+.hero-stats div b{font-family:Fraunces;font-size:1.9rem;display:block;line-height:1}
+.hero-stats div span{font-size:.85rem;color:var(--muted)}
+.art{position:relative;aspect-ratio:4/5;max-width:470px;margin-left:auto;width:100%}
+.art .arch{position:absolute;inset:0;border-radius:230px 230px 28px 28px;background:linear-gradient(160deg,var(--green) 0%,#a4d24f 55%,#d7ec9c 100%);box-shadow:var(--shadow);overflow:hidden}
+.art .arch::after{content:"";position:absolute;width:140%;height:60%;left:-20%;bottom:-18%;background:rgba(255,255,255,.22);border-radius:50%}
+.art svg.tooth{position:absolute;left:50%;top:50%;width:62%;transform:translate(-50%,-52%);filter:drop-shadow(0 22px 24px rgba(40,70,0,.35))}
+.chip{position:absolute;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 14px 34px -12px rgba(30,50,0,.35);font-size:.82rem}
+.chip b{display:block;font-size:.95rem}
+.chip.c1{left:-26px;bottom:60px}
+.chip.c2{right:-14px;top:70px}
+.stars{color:#f5a623;letter-spacing:2px}
+
+/* doctor */
+.doctor{background:var(--green-wash)}
+.doc-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.doc-card{background:var(--ink);color:#fff;border-radius:var(--radius);padding:44px 34px;position:relative;overflow:hidden;min-height:380px;display:flex;flex-direction:column;justify-content:flex-end}
+.doc-card::before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:var(--green);top:-90px;right:-90px;opacity:.95}
+.doc-card .initials{position:absolute;top:44px;left:34px;font-family:Fraunces;font-size:5.2rem;color:var(--green);line-height:1}
+.doc-card h3{font-size:1.6rem}
+.doc-card p{color:#c9d1bd;font-size:.95rem;margin-top:6px}
+.todo{margin-top:22px;border:1.5px dashed #b8c79a;border-radius:14px;padding:14px 18px;font-size:.88rem;color:var(--muted);background:#fff}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.fact{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 16px;text-align:center}
+.fact b{font-family:Fraunces;font-size:1.9rem;color:var(--green-dark);display:block;line-height:1.1}
+.fact span{font-size:.8rem;color:var(--muted)}
+
+/* treatments */
+.t-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:46px}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.t-card{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:#fff;transition:.25s;position:relative}
+.t-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--green)}
+.t-card .num{font-family:Fraunces;color:var(--green);font-size:.95rem;font-weight:600}
+.t-card h3{font-size:1.4rem;margin:8px 0 8px}
+.t-card p{color:var(--muted);font-size:.93rem;margin-bottom:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font:500 .82rem Inter;padding:7px 13px;border-radius:999px;background:var(--green-soft);color:#35560a;border:1px solid transparent;cursor:pointer;transition:.15s}
+.tag:hover{background:var(--green);color:#1d2a05}
+.t-card.emerg{background:var(--ink);color:#fff;border-color:var(--ink)}
+.t-card.emerg p{color:#c9d1bd}
+.t-card.emerg .tag{background:#3a4033;color:#e6f0cf}
+.t-card.emerg .tag:hover{background:var(--green);color:#1d2a05}
+
+/* reviews */
+.reviews{background:var(--ink);color:#fff;overflow:hidden}
+.reviews .eyebrow{color:var(--green)}
+.rev-top{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:24px;margin-bottom:46px}
+.score{display:flex;align-items:center;gap:18px}
+.score b{font-family:Fraunces;font-size:3.8rem;color:var(--green);line-height:1}
+.score span{font-size:.9rem;color:#c9d1bd}
+.feature{font-family:Fraunces;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.35;max-width:880px;margin-bottom:50px}
+.feature cite{display:block;font:600 .85rem Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:16px;font-style:normal}
+.marquee{display:flex;gap:20px;width:max-content;animation:slide 70s linear infinite}
+.marquee:hover{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.r-card{width:340px;flex:none;background:#323829;border-radius:20px;padding:26px;font-size:.93rem;color:#e4ead7}
+.r-card .stars{display:block;margin-bottom:10px}
+.r-card cite{display:block;margin-top:14px;font:600 .78rem Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--green);font-style:normal}
+
+/* promise */
+.p-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:46px}
+.p-card{padding:28px 24px;border-radius:var(--radius);background:var(--green-wash);border:1px solid var(--line)}
+.p-card i{display:grid;place-items:center;width:50px;height:50px;border-radius:14px;background:var(--green);color:#1d2a05;font-style:normal;font-weight:700;margin-bottom:18px;font-size:1.2rem}
+.p-card h3{font-size:1.2rem;margin-bottom:8px}
+.p-card p{font-size:.92rem;color:var(--muted)}
+
+/* appointment */
+.appt{background:linear-gradient(180deg,var(--green-soft),var(--green-wash))}
+.appt-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.sessions{margin-top:30px;display:grid;gap:12px}
+.sess{display:flex;gap:14px;align-items:center;background:#fff;border-radius:16px;padding:16px 20px;border:1px solid var(--line)}
+.sess b{display:block}
+.sess span{font-size:.88rem;color:var(--muted)}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--green);flex:none}
+form{background:#fff;border-radius:var(--radius);padding:34px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form .full{grid-column:1/-1}
+label{font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--green-wash);color:var(--ink);transition:.15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green);background:#fff;box-shadow:0 0 0 4px rgba(122,181,29,.18)}
+textarea{resize:vertical;min-height:84px}
+.seg{display:flex;gap:10px}
+.seg label{flex:1;margin:0;text-transform:none;letter-spacing:0;font-size:.95rem;font-weight:500;color:var(--ink)}
+.seg input{display:none}
+.seg span{display:block;text-align:center;padding:13px;border:1.5px solid var(--line);border-radius:12px;cursor:pointer;background:var(--green-wash)}
+.seg input:checked+span{background:var(--green);border-color:var(--green);font-weight:700;color:#1d2a05}
+.note{font-size:.8rem;color:var(--muted)}
+
+/* visit */
+.v-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:stretch}
+.v-info{display:grid;gap:18px;margin-top:28px}
+.v-row{display:flex;gap:14px;align-items:flex-start}
+.v-row .ic{width:42px;height:42px;border-radius:12px;background:var(--green-soft);display:grid;place-items:center;flex:none;color:var(--green-dark);font-weight:700}
+.v-row b{display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:380px;box-shadow:var(--shadow)}
+.map iframe{width:100%;height:100%;min-height:380px;border:0}
+.socials{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+
+footer{background:var(--ink);color:#c9d1bd;padding:46px 0 90px;font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer .logo b{color:#fff}footer .logo small{color:#fff}
+footer a:hover{color:var(--green)}
+
+.float-call{display:none}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:960px){
+  section{padding:70px 0}
+  .hero-grid,.doc-grid,.appt-grid,.v-grid{grid-template-columns:1fr;gap:44px}
+  .art{margin:0 auto;max-width:380px}
+  .t-grid{grid-template-columns:1fr 1fr}
+  .p-grid{grid-template-columns:1fr 1fr}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  nav{position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0;padding:10px 20px 20px}
+  nav li a{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  .burger{display:block}
+  .nav-phone{display:none}
+  .float-call{display:flex;position:fixed;bottom:16px;left:16px;right:16px;z-index:60;justify-content:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.45)}
+}
+@media(max-width:600px){
+  .t-grid,.p-grid{grid-template-columns:1fr}
+  form{grid-template-columns:1fr;padding:24px}
+  .chip.c1{left:-8px}.chip.c2{right:-6px}
+  .nav-cta .btn{display:none}
+}
+@media(prefers-reduced-motion:reduce){.marquee{animation:none}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Family Dental Care">
+      <b>family<span>dental</span></b><small>CARE</small>
+    </a>
+    <nav id="menu" aria-label="Main">
+      <ul>
+        <li><a href="#doctor">The Doctor</a></li>
+        <li><a href="#treatments">Treatments</a></li>
+        <li><a href="#stories">Patient Stories</a></li>
+        <li><a href="#book">Appointments</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+919175951978">📞 091759 51978</a>
+      <a class="btn btn-primary" href="#book">Book a visit</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pin">📍 Opp. Bytco Hospital, Nashik Road</span>
+      <h1>Gentle hands, honest care &amp; <em>smiles that stay</em> in the family.</h1>
+      <p class="lead">For over a decade, families across Nashik Road have trusted Dr. Rajkumar Makhijani with everything from a child's first check-up to a grandparent's implants — unhurried, painless and explained at every step.</p>
+      <div class="hero-btns">
+        <a class="btn btn-primary" href="#book">Book an appointment →</a>
+        <a class="btn btn-ghost" href="#treatments">Explore treatments</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>4.9 <span class="stars">★</span></b><span>91 Google reviews</span></div>
+        <div><b>21</b><span>Treatments under one roof</span></div>
+        <div><b>2</b><span>Sessions daily · Mon–Sat</span></div>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <div class="arch">
+        <svg class="tooth" viewBox="0 0 200 220" fill="none">
+          <path d="M100 18c-18-14-62-14-76 22-12 32 4 58 12 86 6 22 8 62 24 62 14 0 12-44 40-44s26 44 40 44c16 0 18-40 24-62 8-28 24-54 12-86C162 4 118 4 100 18Z" fill="#fff"/>
+          <path d="M58 52c8-8 20-10 30-6" stroke="#dcebb8" stroke-width="7" stroke-linecap="round"/>
+          <path d="M150 92c2 14-2 28-6 40" stroke="#e9f2d2" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="chip c1"><span class="stars">★★★★★</span><b>"Painless & gentle"</b>Patient review</div>
+      <div class="chip c2"><b>Open Mon–Sat</b>9:30–2:30 · 5:30–8:30 pm</div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="doctor" id="doctor">
+  <div class="wrap doc-grid">
+    <div class="doc-card reveal">
+      <div class="initials">Dr.</div>
+      <h3>Dr. Rajkumar Makhijani</h3>
+      <p>Family Dental Care · Nashik Road</p>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Meet your dentist</span>
+      <h2>Soft-spoken, soft-handed.</h2>
+      <p class="lead">Patients describe the same thing again and again: a doctor who pauses to ask if anything hurts, who explains every step before it happens, and whose work is so gentle you forget to be nervous.</p>
+      <p class="lead" style="margin-top:14px">At Family Dental Care we treat patients as family members, not appointments. Many households have been with us for eight, ten years and more — parents first, then their children, then grandparents getting implants with the same calm hands.</p>
+      <div class="todo">✏️ Qualifications, registration no. &amp; years of practice — <b>to be added by the clinic</b></div>
+      <div class="facts">
+        <div class="fact"><b>4.9</b><span>Google rating</span></div>
+        <div class="fact"><b>91+</b><span>Patient reviews</span></div>
+        <div class="fact"><b>10 yrs+</b><span>Families returning</span></div>
+        <div class="fact"><b>21</b><span>Treatments</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section id="treatments">
+  <div class="wrap">
+    <div class="t-head reveal">
+      <div>
+        <span class="eyebrow">Treatments</span>
+        <h2>Twenty-one treatments.<br>One familiar face.</h2>
+      </div>
+      <p class="lead" style="max-width:380px">Tap any treatment to pre-fill your appointment request — we'll call to confirm the details.</p>
+    </div>
+    <div class="t-grid" id="tgrid"></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="stories">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div><span class="eyebrow">Patient stories</span><h2 style="margin-bottom:0">Trusted by the families<br>of Nashik Road.</h2></div>
+      <div class="score"><b>4.9</b><span><span class="stars">★★★★★</span><br>from 91 reviews on Google</span></div>
+    </div>
+    <blockquote class="feature reveal">
+      “Doctor Sir is a gift of God to me… His treatment is as soft and skillful as his personality and the tone of his voice.”
+      <cite>— Rajni · treated with special care while undergoing cancer treatment</cite>
+    </blockquote>
+  </div>
+  <div class="marquee" id="marquee"></div>
+  <div class="wrap" style="margin-top:36px">
+    <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Family+Dental+Care+Nashik+Road" target="_blank" rel="noopener">Read all reviews on Google ↗</a>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section id="promise">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Our promise</span>
+      <h2>The calm you feel before<br>the chair even reclines.</h2>
+    </div>
+    <div class="p-grid">
+      <div class="p-card reveal"><i>✓</i><h3>Hygiene, always first</h3><p>Sterilised instruments, a spotless clinic and modern equipment — hygiene and timely service have always been our priority.</p></div>
+      <div class="p-card reveal"><i>♡</i><h3>Painless, at your pace</h3><p>We check in throughout every procedure. If something feels uncomfortable, we stop, adjust and only continue when you're ready.</p></div>
+      <div class="p-card reveal"><i>?</i><h3>Everything explained</h3><p>Before any treatment you'll know what we're doing, why, and what it costs. No surprises, no pressure.</p></div>
+      <div class="p-card reveal"><i>★</i><h3>Family, not files</h3><p>We remember your children's names and your mother's crown. Patients here are family more than just patients.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPOINTMENT -->
+<section class="appt" id="book">
+  <div class="wrap appt-grid">
+    <div class="reveal">
+      <span class="eyebrow">Appointments</span>
+      <h2>Pick a day. We'll take care of the rest.</h2>
+      <p class="lead">Send a request and our front desk will confirm a time that suits you. Open Monday to Saturday — mornings 9:30 am to 2:30 pm and evenings 5:30 pm to 8:30 pm, with a dedicated 2:30–3:30 pm slot for senior citizens. Closed on Sundays.</p>
+      <div class="sessions">
+        <div class="sess"><span class="dot"></span><div><b>Morning session</b><span>9:30 am – 2:30 pm · Monday to Saturday</span></div></div>
+        <div class="sess"><span class="dot"></span><div><b>Evening session</b><span>5:30 pm – 8:30 pm · Monday to Saturday</span></div></div>
+        <div class="sess"><span class="dot"></span><div><b>Special hours for senior citizens</b><span>2:30 pm – 3:30 pm · Monday to Saturday</span></div></div>
+      </div>
+      <div class="socials">
+        <a class="btn btn-dark" href="tel:+919175951978">📞 Call 091759 51978</a>
+        <a class="btn btn-ghost" href="https://dentee.com" target="_blank" rel="noopener">Book on Dentee ↗</a>
+      </div>
+    </div>
+    <form id="apptForm" class="reveal">
+      <div><label for="name">Full name</label><input id="name" required placeholder="Your name"></div>
+      <div><label for="phone">Phone</label><input id="phone" type="tel" required placeholder="10-digit mobile"></div>
+      <div class="full"><label for="treatment">Treatment</label>
+        <select id="treatment"><option value="">Choose a treatment</option></select></div>
+      <div><label for="date">Preferred date</label><input id="date" type="date" required></div>
+      <div><label>Session</label>
+        <div class="seg">
+          <label><input type="radio" name="session" value="Morning" checked><span>Morning</span></label>
+          <label><input type="radio" name="session" value="Evening"><span>Evening</span></label>
+        </div></div>
+      <div class="full"><label for="msg">Anything we should know? (optional)</label><textarea id="msg"></textarea></div>
+      <div class="full"><button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Request appointment →</button>
+        <p class="note" style="margin-top:10px;text-align:center">Opens WhatsApp with your request pre-filled. We'll call to confirm.</p></div>
+    </form>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section id="visit">
+  <div class="wrap v-grid">
+    <div class="reveal">
+      <span class="eyebrow">Visit us</span>
+      <h2>Right opposite Bytco Hospital.</h2>
+      <div class="v-info">
+        <div class="v-row"><div class="ic">📍</div><div><b>Address</b>Trimbak Complex, 9, Shahu Maharaj Path, opp. Bytco Hospital, Rajwada Nagar, Nashik Road, Nashik, Maharashtra 422101</div></div>
+        <div class="v-row"><div class="ic">🕒</div><div><b>Hours</b>Mon–Sat · 9:30 am–2:30 pm &amp; 5:30–8:30 pm<br>Senior citizens · 2:30–3:30 pm<br><span class="note">Sunday: closed</span></div></div>
+        <div class="v-row"><div class="ic">📞</div><div><b>Phone</b><a href="tel:+919175951978">091759 51978</a></div></div>
+      </div>
+      <div class="socials">
+        <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=Family+Dental+Care+Trimbak+Complex+Nashik+Road" target="_blank" rel="noopener">Get directions →</a>
+        <a class="btn btn-ghost" href="https://www.facebook.com/fdcnashik/" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/drrajkumarmakhijani" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="map reveal">
+      <iframe title="Family Dental Care on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Family+Dental+Care,+Trimbak+Complex,+Shahu+Maharaj+Path,+Nashik+Road,+Nashik+422101&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo"><b>family<span>dental</span></b><small>CARE</small></a>
+    <div>© <span id="yr"></span> Family Dental Care, Nashik Road · Dr. Rajkumar Makhijani</div>
+    <div><a href="https://www.facebook.com/fdcnashik/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/drrajkumarmakhijani" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+</footer>
+
+<a class="btn btn-primary float-call" href="tel:+919175951978">📞 Call to book · 091759 51978</a>
+
+<script>
+const GROUPS=[
+ {t:"Cosmetic & smile design",d:"Subtle, natural-looking changes that make you want to smile in photos again.",i:["Teeth whitening","Bonding","Teeth reshaping","Veneers & crowns","Cosmetic procedures"]},
+ {t:"Restore & rebuild",d:"Painless root canals and implants — even for senior citizens.",i:["Root canals","Dental implants","Dentures & bridges","Fillings and sealants"]},
+ {t:"Little smiles",d:"Gentle, friendly care for children and growing smiles.",i:["Paediatrics","Mouth guards"]},
+ {t:"Aligners",d:"Straighter teeth, discreetly.",i:["Aligners","Clear aligners"]},
+ {t:"Oral surgery & laser",d:"Precise, minimally invasive care for jaws, wisdom teeth and gums.",i:["Oral surgery","Extractions","Laser dentistry","TMJ pain"]},
+ {t:"Prevent & protect",d:"Regular care keeps problems small.",i:["Check-ups","Teeth cleaning","X-ray"]},
+ {t:"Emergency care",d:"Toothache or injury? Call us right away.",i:["Emergency care","Online dentist booking"],e:1}
+];
+const REVIEWS=[
+ ["Dr. Rajkumar is an artist in dental treatment. Good care taking.","Harish Ubhriyani"],
+ ["His work is very gentle and painless, and he keeps checking about any pain during the treatment.","Shruti Chandak"],
+ ["Implants done for senior citizen patient and was very smooth. Wish I could give more than 5 stars.","Dinesh Chawla"],
+ ["Visiting since last 10 yrs for all family members. Number 1 Clinic. Number 1 Doctor. No. 1 staff.","Parvaiz Memon"],
+ ["I recently had my root canal treatment done at this clinic, and it went very well.","Roodresh Roy"],
+ ["Absolutely fantastic service from reception and excellent care from Dr. Makhijani and his team.","Farahnaz Khan"],
+ ["We are visiting this clinic since 8 years and we are very happy with the services.","Anil Kumar"],
+ ["Highly recommended. Very hygienic and friendly ambience.","Salim Vora"],
+ ["Dr. Rajkumar sir advised and treated me well. Gave me all the details about my treatment.","Tejrao Bangar"],
+ ["We owe our good teeth health to Dr Makhijani. A seamless professional service.","Prakash Majethia"],
+ ["Very good clinic with updated equipment and very well-trained staff.","Shirish Wakankar"],
+ ["Very good and calm environment. Staff are extremely helpful and courteous. Good followup.","Dinesh Chawla"]
+];
+const $=s=>document.querySelector(s);
+const sel=$("#treatment");
+$("#tgrid").innerHTML=GROUPS.map((g,n)=>`
+ <div class="t-card reveal${g.e?" emerg":""}">
+  <span class="num">0${n+1}</span><h3>${g.t}</h3><p>${g.d}</p>
+  <div class="tags">${g.i.map(x=>`<button type="button" class="tag" data-t="${x}">${x}</button>`).join("")}</div>
+ </div>`).join("");
+GROUPS.flatMap(g=>g.i).forEach(x=>sel.add(new Option(x,x)));
+document.addEventListener("click",e=>{
+  const b=e.target.closest(".tag"); if(!b) return;
+  sel.value=b.dataset.t; $("#book").scrollIntoView({behavior:"smooth"});
+  setTimeout(()=>$("#name").focus({preventScroll:true}),600);
+});
+const card=r=>`<div class="r-card"><span class="stars">★★★★★</span>“${r[0]}”<cite>${r[1]}</cite></div>`;
+$("#marquee").innerHTML=REVIEWS.map(card).join("")+REVIEWS.map(card).join("");
+
+// appointment -> WhatsApp
+const d=$("#date"); d.min=new Date().toISOString().split("T")[0];
+$("#apptForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const s=document.querySelector('input[name=session]:checked').value;
+  const m=`Hello Family Dental Care, I'd like to book an appointment.%0A`+
+   `Name: ${encodeURIComponent($("#name").value)}%0APhone: ${encodeURIComponent($("#phone").value)}%0A`+
+   `Treatment: ${encodeURIComponent(sel.value||"General check-up")}%0ADate: ${d.value} (${s})%0A`+
+   `Notes: ${encodeURIComponent($("#msg").value||"-")}`;
+  window.open("https://wa.me/919175951978?text="+m,"_blank");
+});
+
+// nav
+const burger=$("#burger"),menu=$("#menu");
+burger.onclick=()=>{const o=menu.classList.toggle("open");burger.setAttribute("aria-expanded",o)};
+menu.addEventListener("click",e=>{if(e.target.tagName==="A"){menu.classList.remove("open");burger.setAttribute("aria-expanded",false)}});
+$("#yr").textContent=new Date().getFullYear();
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
