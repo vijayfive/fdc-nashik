@@ -149,6 +149,7 @@ textarea{resize:vertical;min-height:84px}
 .seg span{display:block;text-align:center;padding:13px;border:1.5px solid var(--line);border-radius:12px;cursor:pointer;background:var(--green-wash)}
 .seg input:checked+span{background:var(--green);border-color:var(--green);font-weight:700;color:#1d2a05}
 .note{font-size:.8rem;color:var(--muted)}
+.done{text-align:center;padding:40px 10px}.done h3{font-size:1.8rem;margin:14px 0 8px}.done p{color:var(--muted)}.tick{width:64px;height:64px;border-radius:50%;background:var(--green);color:#1d2a05;font-size:2rem;font-weight:700;display:grid;place-items:center;margin:0 auto}
 
 /* visit */
 .v-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:stretch}
@@ -351,7 +352,7 @@ footer a:hover{color:var(--green)}
         </div></div>
       <div class="full"><label for="msg">Anything we should know? (optional)</label><textarea id="msg"></textarea></div>
       <div class="full"><button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Request appointment →</button>
-        <p class="note" style="margin-top:10px;text-align:center">Opens WhatsApp with your request pre-filled. We'll call to confirm.</p></div>
+        <p class="note" style="margin-top:10px;text-align:center">We'll call you to confirm your time.</p></div>
     </form>
   </div>
 </section>
@@ -431,16 +432,12 @@ document.addEventListener("click",e=>{
 const card=r=>`<div class="r-card"><span class="stars">★★★★★</span>“${r[0]}”<cite>${r[1]}</cite></div>`;
 $("#marquee").innerHTML=REVIEWS.map(card).join("")+REVIEWS.map(card).join("");
 
-// appointment -> WhatsApp
+// appointment (demo: shows confirmation only)
 const d=$("#date"); d.min=new Date().toISOString().split("T")[0];
 $("#apptForm").addEventListener("submit",e=>{
   e.preventDefault();
-  const s=document.querySelector('input[name=session]:checked').value;
-  const m=`Hello Family Dental Care, I'd like to book an appointment.%0A`+
-   `Name: ${encodeURIComponent($("#name").value)}%0APhone: ${encodeURIComponent($("#phone").value)}%0A`+
-   `Treatment: ${encodeURIComponent(sel.value||"General check-up")}%0ADate: ${d.value} (${s})%0A`+
-   `Notes: ${encodeURIComponent($("#msg").value||"-")}`;
-  window.open("https://wa.me/919175951978?text="+m,"_blank");
+  const f=e.target;
+  f.innerHTML=`<div class="full done"><div class="tick">✓</div><h3>Booking done!</h3><p>Thank you, ${$("#name").value.replace(/[<>&]/g,"")}. Your appointment request has been received. We'll call you shortly to confirm.</p></div>`;
 });
 
 // nav
